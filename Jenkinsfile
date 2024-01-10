@@ -28,4 +28,12 @@ pipeline {
             }
         }
     }
+     post {
+        // regression {
+        //     // will happen anytime the most recent build is worse than the previous like if it has an error etc.
+        // }
+        always {
+        echo "test"    // will happen everytime a build completes even if it fails
+        }
+    }
 }

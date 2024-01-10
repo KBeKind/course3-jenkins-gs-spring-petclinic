@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('checkout') {
-            steps {
-                script {
-                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/KBeKind/course3-jenkins-gs-spring-petclinic.git']]])
+        // stage('checkout') {
+        //     steps {
+        //         script {
+        //             checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/KBeKind/course3-jenkins-gs-spring-petclinic.git']]])
       
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
 
         stage('build') {
             steps {
